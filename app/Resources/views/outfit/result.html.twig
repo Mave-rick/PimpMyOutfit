@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ma tenue{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/outfit/result.css')}}">
+{% endblock %}
+
+{% block body %}
+<h2><i class="far fa-star light-star ml-2"></i><i class="fas fa-star dark-star mr-2 "></i>Ma tenue jour <i class="fas fa-star dark-star-right"></i><i class="far fa-star light-star-right ml-2"></i></h2>
+
+<div class="result_container text-center my-5">
+
+	{% if(up) %}
+	<img src="{{asset('img/' ~ up.image)}}" alt="image du haut">	
+
+	{% endif %}
+
+{% if(under_up) %}
+
+	<img src="{{asset('img/' ~ under_up.image)}}" alt="image du t-shirt">
+
+	{% endif %}
+
+{% if(down) %}
+	<img src="{{asset('img/' ~ down.image)}}" alt="Image du bas">
+
+	{% endif %}
+
+
+	<button class="reload btn btn-primary" type="button" name="button">Pas convaincu</button></a>
+</div>
+
+
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{asset('js/outfit/result/reload.js')}}"></script>
+{% endblock %}

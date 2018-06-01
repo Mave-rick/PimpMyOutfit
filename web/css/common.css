@@ -1,0 +1,129 @@
+body{
+  background-color:  #f85859;
+  color: #15171b;
+  font-family: 'Vollkorn', serif;
+
+}
+h1{
+  text-align: center;
+  margin: 1em 0 ;
+  font-size: 4em;
+  color:  #fff;
+}
+header{
+  width: 100%;
+}
+.title{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background-color: #48222F;
+}
+.title img{
+  height: 140px;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+footer{
+background-color: #48222F;
+margin-top: 22em;
+
+
+color:  #fff;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+footer p {
+padding-top:22px;
+}
+
+footer i {
+  margin-left: 1em;
+
+}
+a:hover{
+  text-decoration: none;
+}
+h2{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #48222F;
+  font-size: 3.5em;
+}
+.fa-question{
+  width:5%;
+  padding:20px 0;
+  margin-left: 47%;
+  text-align: center;
+  font-size: 4em;
+  color:#fff;
+  border:1px solid #48222F;
+  border-radius:30px;
+  background-color:  #48222F;
+}
+.fa-question:hover{
+  background-color: #fff;
+  color:#48222F;
+  border: none;
+  cursor: pointer;
+
+}
+
+@media (min-width: 375px){
+  h2{
+    font-size: 1.8em;
+  }
+  .fa-question{
+    width:20%;
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 768px){
+  .fa-question{
+    width:12%;
+    padding:20px 0;
+    margin-left: 43%;
+    text-align: center;
+    font-size: 4em;
+    color:#fff;
+    border:1px solid #48222F;
+    border-radius:30px;
+    background-color:  #48222F;
+  }
+  h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #48222F;
+    font-size: 3.5em;
+  }
+
+}
+@media (min-width: 1024px){
+
+  .fa-question{
+    width:10%;
+    padding:20px 0;
+    margin-left: 45%;
+    text-align: center;
+    font-size: 4em;
+    color:#fff;
+    border:1px solid #48222F;
+    border-radius:30px;
+    background-color:  #48222F;
+  }
+
+  }
+@media (min-width: 1440px){
+  .fa-question{
+    width:5%;
+    padding:20px 0;
+    margin-left: 47%;
+    text-align: center;
+    font-size: 4em;
+    color:#fff;
+    border:1px solid #48222F;
+    border-radius:30px;
+    background-color:  #48222F;
+  }
+
+}

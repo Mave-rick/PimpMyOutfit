@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ cloth.name }}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/cloth/show.css')}}">
+{% endblock %}
+
+{% block body %}
+
+
+<h2>{{ cloth.name }}</h2>
+<div class="container">
+	<div class="row justify-content-lg-around">
+		<div class="description ">
+			<p><span>Couleur:</span> {{cloth.color}}</p>
+			<p><span>Saison:</span> {{cloth.season}}</p>
+			<p><span>Température:</span> {{cloth.temperature}} °C</p>
+			<p><span>Type:</span> {{cloth.part}}</p>
+		</div>
+
+		<div class="image">
+			<img class="img" src="{{asset('/img/' ~ cloth.image)}}" alt="photo du vêtement">
+		</div>
+
+	</div>
+
+	<a href="{{path('dressing_index')}}"><i class="text-center fas fa-undo-alt my-5">Retour</i></a>
+</div>
+
+{% endblock %}

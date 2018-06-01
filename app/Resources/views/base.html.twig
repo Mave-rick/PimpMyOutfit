@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+		<!-- link meta responsive -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>{% block title %}{% endblock %} | Pimp My Outfit</title>
+		<!-- Link CSS bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- link fontawesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+		<!-- links fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+		<!-- link CSS commun -->
+		<link rel="stylesheet" href="{{asset('css/common.css')}}">
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		<header>
+		
+
+			<div class="title ">
+				<a href="{{path('homepage')}}"><h1>{{'pimp my outfit' | upper}}</h1></a>
+				<a href="{{path('homepage')}}"><img src="{{asset('img/logo.png')}}" alt="logo robe noire"></a>
+			</div>
+		
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="{{path('homepage')}}">Home<i class="fas fa-home ml-1"></i></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item">
+			        <a class="nav-link" href="{{path('dressing_index')}}">Mon dressing </a>
+			      </li>
+			      <li class="nav-item ">
+			        <a class="nav-link" href="{{path('weather_form')}}">Hasard </a>
+			      </li>
+			  	</ul>
+			  </div>
+		  	</nav>
+	  	</header>
+        <!-- ajout de flash messages -->
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+		{% block body %}
+		<h2 class="text-center mt-5">...et si on laisser le hasard choisir ?</h2>
+		<a href="{{path('weather_form')}}"><i class="fas fa-question mt-5"></i></a>
+
+		{% endblock %}
+		<footer>
+			<p>Made by me with</p> <i class="far fa-heart"></i>
+
+		</footer>
+		<!-- scripts Bootstrap/js/jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<!-- script js perso -->
+		<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+		{% block javascripts %}{% endblock %}
+	</body>
+	</html>

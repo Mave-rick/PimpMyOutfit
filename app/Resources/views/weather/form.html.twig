@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Temps{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/weather.css')}}">
+{% endblock %}
+
+{% block body %}
+<h2 class="text-left ml-4 mt-5 mb-3 col-12 col-sm-12  ">Quel temps fait-il aujourd'hui ?</h2>
+
+<div class="row">
+	<div class="weather_form col-8 ml-4 mt-3 col-md-5 col-lg-4 ">
+		{{form_start(form, {attr: {novalidate: 'novalidate'}} )}}
+		{{form_widget(form)}}
+		<input class="btn btn-primary"type="submit"  value="Envoyer">
+		{{form_end(form)}}
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}

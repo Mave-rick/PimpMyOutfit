@@ -1,0 +1,26 @@
+.result_container img{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 200px;
+  margin: 4em 2em;
+}
+
+h2{
+  margin: 1em 1em;
+}
+.dark-star-right{
+  font-size: 0.3em;
+}
+.light-star-right{
+  font-size: .8em;
+}
+.dark-star{
+  font-size: .9em;
+}
+.light-star{
+  font-size: .5em;
+}
+
+.btn{
+  margin-left: 6em;
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon dressing{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{asset('css/dressingindex.css')}}">
+{% endblock %}
+
+{% block body %}
+<h2 class="my-5 ml-4">Mon dressing<i class="fas fa-tag ml-3"></i></h2>
+
+<div class="row">
+	<div class=" add col-12">
+
+
+
+<a href="{{path('dressing_new_cloth')}}"><button class ="btn btn-primary ml-4 mb-5" type="button" name="button">Ajouter un vêtement<i class="fas fa-plus ml-2"></i></button></a>
+
+</div>
+</div>
+
+	<div class="row no-gutters">
+		<div class="col-12">
+
+
+	<table class="table table-striped  no-gutters">
+		<thead >
+			<tr>
+				<th scope="col">Nom</th>
+				<th scope="col">Saison</th>
+				<th scope="col">Image</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody >
+			{% for cloth in list %}
+			<tr>
+				<td class="name">{{cloth.name}}</td>
+				<td>{{cloth.season}}</td>
+				<td><img src="{{asset('img/' ~ cloth.image)}}" alt="image du vêtement"> </td>
+
+
+
+				<td class = "action"><a href="{{path('dressing_show_cloth', {"id" : cloth.id})}}"><button type="button" class="btn btn-voir mr-2"><i class="fas fa-eye"></i></button></a>
+					<a href="{{path('dressing_edit_cloth', {"id" : cloth.id})}}"><button type="button" class="btn btn-edit mr-2"><i class="fas fa-pencil-alt"></i></button></a>
+					<a href="{{path('dressing_delete_cloth', {"id" : cloth.id})}}"><button type="button" class="btn btn-delete mr-2"><i class="far fa-trash-alt"></i></button></a>
+				</td>
+
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</div>
+</div>
+<div class="text-center my-5">
+	<a href="#"><i class="fas fa-arrow-circle-up"></i></a>
+</div>
+
+{% endblock %}

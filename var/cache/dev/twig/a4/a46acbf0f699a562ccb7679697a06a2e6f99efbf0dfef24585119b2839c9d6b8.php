@@ -58,7 +58,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
     </head>
     <body>
 \t\t<header>
-\t\t
+
 
 \t\t\t<div class=\"title \">
 \t\t\t\t<a href=\"";
@@ -74,7 +74,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/logo.png"), "html", null, true);
         echo "\" alt=\"logo robe noire\"></a>
 \t\t\t</div>
-\t\t
+
 \t\t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
 \t\t\t  <a class=\"navbar-brand\" href=\"";
         // line 30
@@ -288,13 +288,13 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
     </head>
     <body>
 \t\t<header>
-\t\t
+
 
 \t\t\t<div class=\"title \">
 \t\t\t\t<a href=\"{{path('homepage')}}\"><h1>{{'pimp my outfit' | upper}}</h1></a>
 \t\t\t\t<a href=\"{{path('homepage')}}\"><img src=\"{{asset('img/logo.png')}}\" alt=\"logo robe noire\"></a>
 \t\t\t</div>
-\t\t
+
 \t\t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
 \t\t\t  <a class=\"navbar-brand\" href=\"{{path('homepage')}}\">Home<i class=\"fas fa-home ml-1\"></i></a>
 \t\t\t  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">

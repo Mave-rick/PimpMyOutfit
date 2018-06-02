@@ -1,11 +1,11 @@
 h2{
   color:  #48222F;
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Vollkorn', serif;
 }
 thead {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 td {
   font-size: 1.3em;
@@ -55,10 +55,12 @@ td {
   font-size: .7em;
 }
 .fa-pencil-alt, .fa-trash-alt, .fa-eye{
-  font-size: 2em;;
+  font-size: 1.2em;
+  
+  
 }
 img{
-  max-width:150px;
+  max-width:60px;
   border:solid 1px black;
 }
 .fa-arrow-circle-up{

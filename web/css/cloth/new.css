@@ -18,8 +18,11 @@ input[type=submit]{
   font-size: 1.5em;
 }
 h1{
-  font-size:2.1em;
-  }
+  text-align: center;
+  margin: 1em 0 ;
+  font-size: 3.8em;
+  color:  #fff;
+}
   .title{
     display:flex;
     justify-content:space-around;
@@ -29,6 +32,11 @@ input[type=file]{
 }
 label{
   font-size:1.2em;
+}
+..title img{
+  height: 140px;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 @media(min-width:768px){

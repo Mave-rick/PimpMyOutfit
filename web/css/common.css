@@ -4,10 +4,13 @@ body{
   font-family: 'Vollkorn', serif;
 
 }
+nav{
+  font-size:2em;
+}
 h1{
   text-align: center;
   margin: 1em 0 ;
-  font-size: 4em;
+  font-size: 3.8em;
   color:  #fff;
 }
 header{
@@ -26,7 +29,7 @@ header{
 }
 footer{
 background-color: #48222F;
-margin-top: 22em;
+margin-top: 12em;
 
 
 color:  #fff;
@@ -48,12 +51,12 @@ a:hover{
 h2{
   font-family: 'Roboto Condensed', sans-serif;
   color: #48222F;
-  font-size: 3.5em;
+  font-size: 2.5em;
 }
 .fa-question{
-  width:5%;
+  width:25%;
   padding:20px 0;
-  margin-left: 47%;
+  margin-left: 38%;
   text-align: center;
   font-size: 4em;
   color:#fff;
@@ -68,6 +71,9 @@ h2{
   cursor: pointer;
 
 }
+imput[type=submit]{
+  font-size:1.6em;
+}
 
 @media (min-width: 375px){
   h2{
@@ -76,6 +82,13 @@ h2{
   .fa-question{
     width:20%;
     margin-left: 40%;
+  }
+  footer{
+  margin-top: 14em;
+}
+@media(min-width:425px){
+  footer{
+  margin-top: 16em;
   }
 }
 
@@ -111,6 +124,9 @@ h2{
     border-radius:30px;
     background-color:  #48222F;
   }
+  footer{
+  margin-top: 17em;
+}
 
   }
 @media (min-width: 1440px){
@@ -126,4 +142,9 @@ h2{
     background-color:  #48222F;
   }
 
+}
+@media(min-width:1900px){
+  footer{
+  margin-top: 24em;
+}
 }

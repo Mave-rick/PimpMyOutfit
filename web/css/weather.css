@@ -20,9 +20,14 @@ option{
 input[type=submit]{
   font-size: 2em;
   margin-top: 2em;
+  background-color: rgba(139,149,160,0.64);
+  border-color: #686c70;
 }
 nav{
   font-size:1.5em;
+}
+.form-control{
+  font-size:.9rem;
 }
 @media (min-width:425px){
   h2{

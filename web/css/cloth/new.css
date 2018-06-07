@@ -15,17 +15,24 @@ form{
   font-size: .9em;
 }
 input[type=submit]{
-  font-size: 1.5em;
+  font-size: 2em;
+  margin-top: 2em;
+  background-color: rgba(72,34,47,0.93);
+  border-color: rgba(72,34,47,0.93);
+  color:gainsboro;
 }
 h1{
   text-align: center;
   margin: 1em 0 ;
-  font-size: 3.8em;
+  font-size: 2em;
   color:  #fff;
 }
   .title{
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
+    align-items: center;
+    background-color: #48222F;
+    height: 150px;
   }
 input[type=file]{
   font-size:larger;
@@ -34,7 +41,7 @@ label{
   font-size:1.2em;
 }
 ..title img{
-  height: 140px;
+  height: 108px;
   margin-right: 1em;
   margin-left: 1em;
 }

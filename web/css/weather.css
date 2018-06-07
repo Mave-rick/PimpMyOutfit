@@ -1,6 +1,7 @@
 h2{
-  color:white;
+  color:gainsboro;
   font-family: 'Vollkorn', serif;
+  font-size:2em;
 
 }
 
@@ -20,8 +21,9 @@ option{
 input[type=submit]{
   font-size: 2em;
   margin-top: 2em;
-  background-color: rgba(139,149,160,0.64);
-  border-color: #686c70;
+  background-color: rgba(72,34,47,0.93);
+  border-color: rgba(72,34,47,0.93);
+  color:gainsboro;
 }
 nav{
   font-size:1.5em;

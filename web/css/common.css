@@ -13,7 +13,7 @@ nav{
 h1{
   text-align: center;
   margin: 1em 0 ;
-  font-size: 3.8em;
+  font-size: 2em;
   color:  #fff;
 }
 header{
@@ -24,15 +24,16 @@ header{
   justify-content:center;
   align-items: center;
   background-color: #48222F;
+  height: 150px;
 }
 .title img{
-  height: 140px;
+  height: 108px;;
   margin-right: 1em;
   margin-left: 1em;
 }
 footer{
 background-color: #48222F;
-margin-top: 12em;
+margin-top: 19em;
 
 
 color:  #fff;

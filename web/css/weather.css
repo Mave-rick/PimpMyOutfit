@@ -2,22 +2,17 @@ h2{
   color:gainsboro;
   font-family: 'Vollkorn', serif;
   font-size:2em;
-
 }
-
 .form-error-message{
   color:black;
   text-decoration: underline;
 }
-
 label{
   font-size:1.5em;
 }
-
 option{
   font-size:1.5em;
 }
-
 input[type=submit]{
   font-size: 2em;
   margin-top: 2em;

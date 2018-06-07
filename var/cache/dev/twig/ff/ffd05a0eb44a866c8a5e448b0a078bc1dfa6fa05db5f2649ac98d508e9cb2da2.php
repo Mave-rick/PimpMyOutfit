@@ -89,7 +89,7 @@ class __TwigTemplate_4e884d15bc297e9a8087824e8a5b947145a24d699cb5313865e33b9a7c1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
-        echo "<h2><i class=\"far fa-star light-star ml-2\"></i><i class=\"fas fa-star dark-star mr-2 \"></i>Ma tenue jour <i class=\"fas fa-star dark-star-right\"></i><i class=\"far fa-star light-star-right ml-2\"></i></h2>
+        echo "<h2><i class=\"far fa-star light-star ml-2\"></i><i class=\"fas fa-star dark-star mr-2 \"></i>Ma tenue du jour <i class=\"fas fa-star dark-star-right\"></i><i class=\"far fa-star light-star-right ml-2\"></i></h2>
 
 <div class=\"result_container text-center my-5\">
 
@@ -99,7 +99,7 @@ class __TwigTemplate_4e884d15bc297e9a8087824e8a5b947145a24d699cb5313865e33b9a7c1
             // line 15
             echo "\t<img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("img/" . $this->getAttribute(($context["up"] ?? $this->getContext($context, "up")), "image", array()))), "html", null, true);
-            echo "\" alt=\"image du haut\">\t
+            echo "\" alt=\"image du haut\">
 
 \t";
         }
@@ -201,12 +201,12 @@ class __TwigTemplate_4e884d15bc297e9a8087824e8a5b947145a24d699cb5313865e33b9a7c1
 {% endblock %}
 
 {% block body %}
-<h2><i class=\"far fa-star light-star ml-2\"></i><i class=\"fas fa-star dark-star mr-2 \"></i>Ma tenue jour <i class=\"fas fa-star dark-star-right\"></i><i class=\"far fa-star light-star-right ml-2\"></i></h2>
+<h2><i class=\"far fa-star light-star ml-2\"></i><i class=\"fas fa-star dark-star mr-2 \"></i>Ma tenue du jour <i class=\"fas fa-star dark-star-right\"></i><i class=\"far fa-star light-star-right ml-2\"></i></h2>
 
 <div class=\"result_container text-center my-5\">
 
 \t{% if(up) %}
-\t<img src=\"{{asset('img/' ~ up.image)}}\" alt=\"image du haut\">\t
+\t<img src=\"{{asset('img/' ~ up.image)}}\" alt=\"image du haut\">
 
 \t{% endif %}
 

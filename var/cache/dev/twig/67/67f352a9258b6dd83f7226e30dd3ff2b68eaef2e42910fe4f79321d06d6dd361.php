@@ -100,7 +100,7 @@ class __TwigTemplate_34a140ad32c81b6f9ce8e6007c9bdd2b7f953b53d09dc2cb61139250866
         // line 15
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(($context["form"] ?? $this->getContext($context, "form")), 'widget');
         echo "
-\t\t<input class=\"btn btn-primary\"type=\"submit\"  value=\"Envoyer\">
+\t\t<input class=\"btn btn-primary\"type=\"submit\"  value=\"GO !!!\">
 \t\t";
         // line 17
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
@@ -161,7 +161,7 @@ class __TwigTemplate_34a140ad32c81b6f9ce8e6007c9bdd2b7f953b53d09dc2cb61139250866
 \t<div class=\"weather_form col-8 ml-4 mt-3 col-md-5 col-lg-4 \">
 \t\t{{form_start(form, {attr: {novalidate: 'novalidate'}} )}}
 \t\t{{form_widget(form)}}
-\t\t<input class=\"btn btn-primary\"type=\"submit\"  value=\"Envoyer\">
+\t\t<input class=\"btn btn-primary\"type=\"submit\"  value=\"GO !!!\">
 \t\t{{form_end(form)}}
 \t</div>
 </div>

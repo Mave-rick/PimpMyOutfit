@@ -1,5 +1,8 @@
 body{
-  background-color:  #f85859;
+  background-color: #f85859;
+  background-image: linear-gradient( #f85859, #b48f8f );
+
+
   color: #15171b;
   font-family: 'Vollkorn', serif;
 

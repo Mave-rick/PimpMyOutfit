@@ -137,7 +137,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 \t\t";
         // line 55
         $this->displayBlock('body', $context, $blocks);
-        // line 60
+        // line 70
         echo "\t\t<footer>
 \t\t\t<p>Made by me with</p> <i class=\"far fa-heart\"></i>
 
@@ -148,13 +148,13 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 \t\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\"></script>
 \t\t<!-- script js perso -->
 \t\t<script type=\"text/javascript\" src=\"";
-        // line 69
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
 \t\t";
-        // line 70
+        // line 80
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 71
+        // line 81
         echo "\t</body>
 \t</html>
 ";
@@ -210,11 +210,21 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 56
-        echo "\t\t<h2 class=\"text-center mt-5\">...et si on laisser le hasard choisir ?</h2>
-\t\t<a href=\"";
-        // line 57
+        echo "\t\t<h2 class=\"text-center mt-5\">Un petit point météo avant de démarrer !</h2>
+        <div class=\"row weatherData justify-content-center mt-4  \">
+            <div class=\"api col-8 text-center pt-2\">
+                <p class = \"city mb-3\"></p>
+\t\t\t\t<p class=\"description\"></p>
+                <p class=\"tMax\">T° MAX : </p>
+                <p class=\"tMin\">T° MIN : </p>
+            </div>
+
+        </div>
+
+\t\t<a class=\"go \" href=\"";
+        // line 67
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("weather_form");
-        echo "\"><i class=\"fas fa-question mt-5\"></i></a>
+        echo "\">Trouve moi une tenue</i></a>
 
 \t\t";
         
@@ -225,7 +235,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     }
 
-    // line 70
+    // line 80
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -254,7 +264,7 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
 
     public function getDebugInfo()
     {
-        return array (  229 => 70,  216 => 57,  213 => 56,  204 => 55,  187 => 17,  170 => 7,  158 => 71,  156 => 70,  152 => 69,  141 => 60,  139 => 55,  136 => 54,  130 => 53,  121 => 50,  116 => 49,  111 => 48,  107 => 47,  97 => 40,  91 => 37,  81 => 30,  72 => 26,  66 => 25,  55 => 18,  53 => 17,  49 => 16,  37 => 7,  29 => 1,);
+        return array (  239 => 80,  226 => 67,  213 => 56,  204 => 55,  187 => 17,  170 => 7,  158 => 81,  156 => 80,  152 => 79,  141 => 70,  139 => 55,  136 => 54,  130 => 53,  121 => 50,  116 => 49,  111 => 48,  107 => 47,  97 => 40,  91 => 37,  81 => 30,  72 => 26,  66 => 25,  55 => 18,  53 => 17,  49 => 16,  37 => 7,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -322,8 +332,18 @@ class __TwigTemplate_20e0610c2f449405d6c2ac07357585c42706deb85ca7c032cb320a4d2f1
         {% endfor %}
 
 \t\t{% block body %}
-\t\t<h2 class=\"text-center mt-5\">...et si on laisser le hasard choisir ?</h2>
-\t\t<a href=\"{{path('weather_form')}}\"><i class=\"fas fa-question mt-5\"></i></a>
+\t\t<h2 class=\"text-center mt-5\">Un petit point météo avant de démarrer !</h2>
+        <div class=\"row weatherData justify-content-center mt-4  \">
+            <div class=\"api col-8 text-center pt-2\">
+                <p class = \"city mb-3\"></p>
+\t\t\t\t<p class=\"description\"></p>
+                <p class=\"tMax\">T° MAX : </p>
+                <p class=\"tMin\">T° MIN : </p>
+            </div>
+
+        </div>
+
+\t\t<a class=\"go \" href=\"{{path('weather_form')}}\">Trouve moi une tenue</i></a>
 
 \t\t{% endblock %}
 \t\t<footer>

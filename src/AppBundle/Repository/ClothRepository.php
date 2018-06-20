@@ -10,52 +10,46 @@ namespace AppBundle\Repository;
  */
 class ClothRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function tshirtActionByTemp($season, $temperature)
-    {
+    public function tshirtActionByTemp( $temperature)
+    { 
         return $this->getEntityManager()
         ->createQuery(
             "SELECT c
             FROM AppBundle:Cloth c
-            WHERE c.season = :season
-            AND c.part = '4'
+            WHERE c.part = '4'
             AND c.temperature > :temperature"
 
-            )->setParameter('season' , $season)
-            ->setParameter('temperature' , $temperature)
+            )->setParameter('temperature' , $temperature)
 
 
             ->getResult();
 
     }
-    public function uptActionByTemp($season, $temperature)
+    public function uptActionByTemp($temperature)
     {
         return $this->getEntityManager()
         ->createQuery(
             "SELECT c
             FROM AppBundle:Cloth c
-            WHERE c.season = :season
-            AND c.part = '5'
+            WHERE c.part = '5'
             AND c.temperature > :temperature"
 
-            )->setParameter('season' , $season)
-            ->setParameter('temperature' , $temperature)
+            )->setParameter('temperature' , $temperature)
 
 
             ->getResult();
 
     }
-    public function downtActionByTemp($season, $temperature)
+    public function downtActionByTemp($temperature)
     {
         return $this->getEntityManager()
         ->createQuery(
             "SELECT c
             FROM AppBundle:Cloth c
-            WHERE c.season = :season
-            AND c.part = '3'
+            WHERE c.part = '3'
             AND c.temperature > :temperature"
 
-            )->setParameter('season' , $season)
-            ->setParameter('temperature' , $temperature)
+            )->setParameter('temperature' , $temperature)
 
 
             ->getResult();

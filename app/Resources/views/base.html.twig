@@ -53,8 +53,21 @@
         {% endfor %}
 
 		{% block body %}
-		<h2 class="text-center mt-5">...et si on laisser le hasard choisir ?</h2>
-		<a href="{{path('weather_form')}}"><i class="fas fa-question mt-5"></i></a>
+		<div class="result_ajax">
+
+		<h2 class="text text-center mt-5">Un petit point météo avant de démarrer !</h2>
+        <div class="row weatherData justify-content-center mt-4  ">
+            <div class="api col-8 text-center pt-2">
+                <p class = "city mb-3"></p>
+				<p class="description"></p>
+                <p class="tMax">T° MAX : </p>
+                <p class="tMin">T° MIN : </p>
+            </div>
+
+        </div>
+
+		<a class="go " href="{{path('weather_form')}}">Trouve moi une tenue</i></a>
+		</div>
 
 		{% endblock %}
 		<footer>

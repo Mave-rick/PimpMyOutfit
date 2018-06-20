@@ -52,20 +52,22 @@ a:hover{
 h2{
   font-family: 'Roboto Condensed', sans-serif;
   color: #48222F;
-  font-size: 2.5em;
+  font-size: 2.1em;
+  margin:0 2em;
 }
-.fa-question{
+.go {
   width:25%;
-  padding:20px 0;
-  margin-left: 38%;
+  padding:9px;
+  margin-left: 12%;
+  margin-top:2em;
   text-align: center;
-  font-size: 4em;
+  font-size: 1.8em;
   color:#fff;
   border:1px solid #48222F;
-  border-radius:30px;
+  border-radius:8px;
   background-color:  #48222F;
 }
-.fa-question:hover{
+.go:hover{
   background-color: #fff;
   color:#48222F;
   border: none;
@@ -74,6 +76,31 @@ h2{
 }
 imput[type=submit]{
   font-size:1.6em;
+}
+.api{
+  width:100%;
+  height:  50%;
+  margin-bottom: 9em;
+  margin-top: 4em;
+  background-color:rgba(220,220,220,0.8);
+  border:1px solid #48222F;
+  color: #251f21;
+  border-radius: 24px;
+  border-top-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+}
+.city{
+  text-transform:uppercase;
+  color:251f21;
+  font-size:2em;
+}
+.description{
+  font-size:1.2em;
+  text-transform: capitalize;
+}
+.ajax img{
+  height:120px;
+  margin:10px;
 }
 
 @media (min-width: 375px){
@@ -90,6 +117,9 @@ imput[type=submit]{
 @media(min-width:425px){
   footer{
   margin-top: 16em;
+  }
+  .go{
+    margin-left:16%;
   }
 }
 
@@ -110,6 +140,9 @@ imput[type=submit]{
     color: #48222F;
     font-size: 3.5em;
   }
+  .go{
+    margin-left:32%;
+  }
 
 }
 @media (min-width: 1024px){
@@ -128,6 +161,9 @@ imput[type=submit]{
   footer{
   margin-top: 17em;
 }
+.go{
+  margin-left:36%;
+}
 
   }
 @media (min-width: 1440px){
@@ -142,10 +178,16 @@ imput[type=submit]{
     border-radius:30px;
     background-color:  #48222F;
   }
+  .go{
+    margin-left:40%;
+  }
 
 }
 @media(min-width:1900px){
   footer{
   margin-top: 24em;
+}
+.go{
+  margin-left:42%;
 }
 }

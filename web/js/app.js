@@ -2,10 +2,6 @@ var app = {
   init:function () {
     console.log('hello my dressing');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ea53e2c288a321ac345f824a77d22de1e5808903
 // Utilisation de la geolocalisation avec l'objet du navigateur
     if(navigator.geolocation){
       var loc = navigator.geolocation.getCurrentPosition(showLocation);
@@ -136,5 +132,5 @@ reload: function () {
 
 }
 }
-}
+
 $(app.init);

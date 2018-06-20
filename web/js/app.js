@@ -1,14 +1,13 @@
 var app = {
   init:function () {
-    console.log('hello my dressing');
 
 // Utilisation de la geolocalisation avec l'objet du navigateur
     if(navigator.geolocation){
       var loc = navigator.geolocation.getCurrentPosition(showLocation);
-      console.log(loc);
+
     }
     else{
-      alert("Pas de Géolocalisation possible avec votre navigateur ou appareil mobile");
+      alert("Pas de Géolocalisation possible avec votre navigateur ou appareil mobile, l'appli ne fonctionnera pas.");
     }
 // Fonction de succes de l'objet qui affiche les coordonnées
     function showLocation(loc) {
@@ -39,37 +38,37 @@ var app = {
       }
     // Ecouteur du retour de la requête en cas de succès
     ).done(function(data){
+      // On récupère les info de l'Pai
     var city = data.name;
     var description = data.weather[0].description
     var tempMax = data.main.temp_max +" °C";
     var tempMin = data.main.temp_min +" °C";
     var icon = data.weather[0].icon;
-
-
-
+    // On construit l'interface
     cityName.append(city);
     descriptionWeather.append(description);
     tMax.append(tempMax);
     tMin.append(tempMin);
 
-    })
-  }
+      })
+    }
+    // on place un écouteur de click sur le bouton "trouve moi une tenue" pour déclencher l'action
   $('.go').on('click', app.weatherData);
-},
+  },
+// Fonction récupère les data de température
+  weatherData: function (evt) {
 
-weatherData: function (evt) {
+    evt.preventDefault();
+    console.log('PIMP');
+    var tempText = $('.tMax').text();
+    var temp = /([0-9]+)/.exec(tempText);
+// on appelle la fonction ajax en lui passant la data température
+    app.outfitAjax(temp);
+  },
 
-  evt.preventDefault();
-  console.log('PIMP');
-  var tempText = $('.tMax').text();
-  var temp = /([0-9]+)/.exec(tempText);
+  outfitAjax: function (temp) {
 
-app.outfitAjax(temp);
-},
-
-outfitAjax: function (temp) {
-
-
+// appel ajax vers le controlleur, avec la data température
   $.ajax(
     "http://127.0.0.1:8001/outfit/",
     {
@@ -80,63 +79,61 @@ outfitAjax: function (temp) {
     }
   // Ecouteur du retour de la requête en cas de succès
 ).done(function(response){
-
+// On construit un template qui viendra afficher les résultats d'images
   if(response.up !== ""){
 
-var template = $(`
-  <h2 class="text-center mt-5">Et voilà le travail !</h2>
-      <div class="row weatherData justify-content-center mt-4  ">
-          <div class="ajax col-9  text-center pt-2">
+    var template = $(`
+      <h2 class="text-center mt-5">Et voilà le travail !</h2>
+          <div class="row weatherData justify-content-center mt-4  ">
+              <div class="ajax col-9  text-center pt-2">
 
-          <img src="img/${response.up}" alt="image du haut"><br>
-          <img src="img/${response.under_up}" alt="image du tshirt "><br>
-          <img src="img/${response.down}" alt="image du bas"><br>
+              <img src="img/${response.up}" alt="image du haut"><br>
+              <img src="img/${response.under_up}" alt="image du tshirt "><br>
+              <img src="img/${response.down}" alt="image du bas"><br>
 
+          </div><br>
+
+    <div class="button">
+    <button class="reload btn btn-primary mt-5" type="button" name="button">Pas convaincu</button></a>
+    </div>
+          </div>
+
+
+    `);
+    }else{
+      var template = $(`
+        <h2 class="text-center mt-5">Et voilà le travail!</h2>
+            <div class="row weatherData justify-content-center mt-4  ">
+                <div class="ajax col-9  text-center pt-2">
+      <img src="img/${response.under_up}" alt="image du tshirt "><br>
+      <img src="img/${response.down}" alt="image du bas"><br>
       </div><br>
 
-<div class="button">
-<button class="reload btn btn-primary mt-5" type="button" name="button">Pas convaincu</button></a>
-</div>
+    <div class="button">
+    <button class="reload btn btn-primary mt-5" type="button" name="button">Pas convaincu</button></a>
+
+    </div>
       </div>
 
 
-`);
-}else{
-  var template = $(`
-    <h2 class="text-center mt-5">Et voilà le travail!</h2>
-        <div class="row weatherData justify-content-center mt-4  ">
-            <div class="ajax col-9  text-center pt-2">
-  <img src="img/${response.under_up}" alt="image du tshirt "><br>
-  <img src="img/${response.down}" alt="image du bas"><br>
-  </div><br>
+    `);
+    }
+// On efface le widget météo que l'on a précédement construit
+    $('.result_ajax').empty();
+    // on construit le resultat attendu avec le template defini juste au dessus
+    $('.result_ajax').append(template);
+    // on appel la fonction retry
+    app.retry();
 
-<div class="button">
-<button class="reload btn btn-primary mt-5" type="button" name="button">Pas convaincu</button></a>
-
-</div>
-  </div>
-
-
-`);
+    })
+  },
+  // fonction qui place un écouteur de click sur le bouton "pas convaicu"
+  retry: function () {
+    $('.reload').on('click',app.lunchAjaxAgain);
+  },
+// fonction qui relance l'appel ajax pour un nouveau résultat, sans repasser par le widget météo
+  lunchAjaxAgain: function () {
+    app.outfitAjax();
+  }
 }
-
-$('.result_ajax').empty();
-$('.result_ajax').append(template);
-app.retry();
-
-  })
-
-
-},
-retry: function () {
-  $('.reload').on('click',app.lunchAjaxAgain);
-
-
-
-},
-lunchAjaxAgain: function () {
-  app.outfitAjax();
-}
-}
-
 $(app.init);

@@ -62,11 +62,13 @@ weatherData: function (evt) {
   evt.preventDefault();
   console.log('PIMP');
   var tempText = $('.tMax').text();
-  var tempOut = /([0-9]+)/.exec(tempText);
-  var temp = parseInt(tempOut[0]);
+  var temp = /([0-9]+)/.exec(tempText);
 
-  // console.log(temp);
-  // console.log(jQuery.type(temp));
+app.outfitAjax(temp);
+},
+
+outfitAjax: function (temp) {
+
 
   $.ajax(
     "http://127.0.0.1:8001/outfit/",
@@ -110,6 +112,7 @@ var template = $(`
 
 <div class="button">
 <button class="reload btn btn-primary mt-5" type="button" name="button">Pas convaincu</button></a>
+
 </div>
   </div>
 
@@ -119,17 +122,20 @@ var template = $(`
 
 $('.result_ajax').empty();
 $('.result_ajax').append(template);
-var sameTemp = temp;
-$('.reload').on('click',app.reload);
+app.retry();
 
   })
 
 
 },
-reload: function () {
-  console.log('reload');
-  location.reload();
+retry: function () {
+  $('.reload').on('click',app.lunchAjaxAgain);
 
+
+
+},
+lunchAjaxAgain: function () {
+  app.outfitAjax();
 }
 }
 
